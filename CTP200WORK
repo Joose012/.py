@@ -1,0 +1,20 @@
+# List of primary colors
+primary_colors = ["red", "blue", "yellow"]
+
+# Get input from the user
+color1 = input("Enter the first primary color (red, blue, yellow): ").lower()
+color2 = input("Enter the second primary color (red, blue, yellow): ").lower()
+
+# Check if the colors are valid
+if color1 not in primary_colors or color2 not in primary_colors:
+    print("Error: Please enter valid primary colors (red, blue, yellow).")
+elif color1 == color2:
+    print("Error: The colors must be different to mix.")
+else:
+    # Mix the colors and show the result
+    if (color1 == "red" and color2 == "blue") or (color1 == "blue" and color2 == "red"):
+        print("Mixing red and blue creates purple.")
+    elif (color1 == "red" and color2 == "yellow") or (color1 == "yellow" and color2 == "red"):
+        print("Mixing red and yellow creates orange.")
+    elif (color1 == "blue" and color2 == "yellow") or (color1 == "yellow" and color2 == "blue"):
+        print("Mixing blue and yellow creates green.")
